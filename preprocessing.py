@@ -47,9 +47,9 @@ if __name__ == "__main__":
         instruction_0 = f'你是人工智慧助理，以下將提供被挖空的文本，你要對挖空的位置填入「在」或「再」，輸出格式為「答案：再、在」。以下為題目:{preprocessed_output} 答案：'
         instruction_1 = f'你是人工智慧助理，以下將提供被挖空的文本，你要對挖空的位置填入「在」或「再」，輸出格式為「答案：再、在」。以下提供一個範例：題目：我___圖書館裡看書，等等要___回學校。答案：在、再。以下為題目:{preprocessed_output} 答案：'
         instruction_2 = f'你是人工智慧助理，以下將提供被挖空的文本，你要對挖空的位置填入「在」或「再」，輸出格式為「答案：再、在」。以下提供兩個範例：題目：我___圖書館裡看書，等等要___回學校。答案：在、再。題目：我___過一下就要回家了，等等我___家你___打給我。答案：再、在、再。以下為題目:{preprocessed_output} 答案：'
-        result_0.append({"instruction": instruction_0, "output": expect_answer})
-        result_1.append({"instruction": instruction_1, "output": expect_answer})
-        result_2.append({"instruction": instruction_2, "output": expect_answer})
+        result_0.append({"instruction": instruction_0, "output": expect_answer[:-1]})
+        result_1.append({"instruction": instruction_1, "output": expect_answer[:-1]})
+        result_2.append({"instruction": instruction_2, "output": expect_answer[:-1]})
         
     # data_json_0 = {"data": result_0}
     # data_json_1 = {"data": result_1}
