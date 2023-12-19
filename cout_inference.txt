@@ -1,0 +1,26 @@
+Loading python/3.9.13-gpu
+  Loading requirement: cuda/11.3
+
+============================ Messages from Goddess ============================
+ * Job starting from: Tue Dec 19 20:31:02 CST 2023
+ * Job ID           : 54854
+ * Job name         : bash
+ * Job partition    : v100-16g
+ * Nodes            : 1
+ * Cores            : 4
+ * Working directory: ~/usr/ADL/HW3
+===============================================================================
+
+Mean perplexity: 1.4892171621322632
+Mean perplexity: 1.9015005826950073
+Mean perplexity: 1.9710767269134521
+Mean perplexity: 1.4892171621322632
+Mean perplexity: 1.9015005826950073
+Mean perplexity: 1.9710767269134521
+Mean perplexity: 1.4892171621322632
+Mean perplexity: 1.9015005826950073
+
+============================ Messages from Goddess ============================
+ * Job ended at     : Tue Dec 19 21:01:24 CST 2023
+===============================================================================
+
