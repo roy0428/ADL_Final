@@ -63,7 +63,7 @@ if __name__ == "__main__":
         tokenizer.pad_token_id = tokenizer.eos_token_id
 
     # Load LoRA
-    model = PeftModel.from_pretrained(model, args.peft_path)
+    # model = PeftModel.from_pretrained(model, args.peft_path)
 
     with open(args.test_file, "r") as f:
         data = json.load(f)
@@ -71,7 +71,8 @@ if __name__ == "__main__":
     # predict
     instructions = [get_prompt(x["instruction"]) for x in data["data"]]
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    model.to(device)
+    # model.to(device)
+    model.eval()
     keyword = "ASSISTANT: "  # split it to form the output format
     result_list = []
     cnt = 0

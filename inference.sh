@@ -12,5 +12,5 @@
 
 module load opt gcc python/3.9.13-gpu
 sbatch_pre.sh
-bash run.sh Taiwan-LLM-7B-v2.0-chat/ axolotl/qlora-out_final/ data/final/test_zero.json prediction.json combine.json
+bash run.sh Taiwan-LLM-7B-v2.0-chat/ axolotl/qlora-out_final/ data/final/test_one.json prediction.json combine.json
 sbatch_post.sh
