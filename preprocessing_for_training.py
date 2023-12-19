@@ -25,5 +25,6 @@ if __name__ == "__main__":
     for data in data_list["data"]:
         data["instruction"] = f'你是人工智慧助理，以下將提供被挖空的文本，你要對挖空的位置填入「在」或「再」，輸出格式為「答案：再、在」。以下為題目:{data["instruction"]} 答案：'
         result.append(data)
-
-    json.dump(result, open(args.output_dir, "w"), indent=2, ensure_ascii=False)
+        
+    data_json = {"data": result}
+    json.dump(data_json, open(args.output_dir, "w"), indent=2, ensure_ascii=False)
