@@ -3,7 +3,7 @@ from tqdm import tqdm
 import json
 
 def generator():
-    api_key = "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"
+    api_key = "APIKEY"
     client = OpenAI(api_key=api_key)
     system_content = "你的任務是以提供的文字造句，句子長度不超過五十個字。"
     user_content = "請造一完整且有趣的句子，內容須包含「在」及「再」，且「在」不要在句首"
