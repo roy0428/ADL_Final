@@ -27,13 +27,9 @@ if __name__ == "__main__":
     with open(args.data_dir, "r") as json_file:
         data_list = json.load(json_file)
 
-    result_0 = []
-    result_1 = []
-    result_2 = []
+    result_0, result_1, result_2 = [], [], []
     for data in data_list:
-        
-        preprocessed_output = ""
-        expect_answer = ""
+        preprocessed_output, expect_answer = "", ""
         for word in data:
             if word == "在":
                 preprocessed_output += "___"

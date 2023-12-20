@@ -17,7 +17,7 @@ def main():
                 refs.append(data["output"])
                 preds.append(data["prediction"])
                 
-            ## Calculate rouge
+            ## Calculate rouge score
             rouge = get_rouge(preds, refs)
             
             ## Calculate accuracy
@@ -32,6 +32,6 @@ def main():
             accuracy = correct_ans / total_ans
             result.append({"filename": filename, "rouge": rouge, "accuracy": accuracy})
 
-    json.dump(result, open("eval.json", "w"), indent=2, ensure_ascii=False)
+    json.dump(result, open("all_results/eval.json", "w"), indent=2, ensure_ascii=False)
 if __name__ == '__main__':
     main()

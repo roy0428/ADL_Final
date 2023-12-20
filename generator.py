@@ -16,7 +16,7 @@ def generator():
         max_tokens=200,
     )
     output = response.choices[0].message.content
-    print(output)
+    # print(output)
     return output
 
 
@@ -27,7 +27,6 @@ def main():
         
     data_json = data
     json.dump(data_json, open("data/output.json", "w"), indent=2, ensure_ascii=False)
-    return
 
 
 if __name__ == "__main__":
