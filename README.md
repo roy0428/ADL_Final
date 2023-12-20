@@ -30,7 +30,7 @@ or modify the training_final.sh and do the following
 bash training_final.sh
 ```
 ## Inference and Evaluation
-After data preprocessing and model training, simply run the following for inference and evaluation
+Inference and Evaluation
 ```
 bash run.sh /path/to/Taiwan-LLM-7B-v2.0-chat/ /path/to/qlora-out/ /path/to/test.json/ /path/to/prediction.json/ /path/to/combined_prediction.json/ 
 ```
