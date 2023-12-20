@@ -21,16 +21,18 @@ python3 preprocessing.py  \
 ```
 
 ## Training
-Model training for summarization
-simply run accelerate launch -m axolotl.cli.train examples/llama-2/qlora_final.yml --datasets.path="/path/to/dataset" --output_dir="/path/to/output/"
+Training
+```
+accelerate launch -m axolotl.cli.train examples/llama-2/qlora_final.yml --datasets.path="/path/to/dataset" --output_dir="/path/to/output/"
+```
 or modify the training_final.sh and do the following
 ```
 bash training_final.sh
 ```
 ## Inference and Evaluation
-After data preprocessing and model training, simply run run.sh /path/to/Taiwan-LLM-7B-v2.0-chat/ /path/to/qlora-out/ /path/to/test.json/ /path/to/prediction.json/ /path/to/combined_prediction.json/ 
+After data preprocessing and model training, simply run the following for inference and evaluation
 ```
-bash run.sh Taiwan-LLM-7B-v2.0-chat/ axolotl/qlora-out_final_1000_zero/ data/final/test_zero.json prediction.json 1000_lora_0.json
+bash run.sh /path/to/Taiwan-LLM-7B-v2.0-chat/ /path/to/qlora-out/ /path/to/test.json/ /path/to/prediction.json/ /path/to/combined_prediction.json/ 
 ```
 or modify the inference.sh and do the following
 ```
