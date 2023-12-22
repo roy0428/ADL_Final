@@ -2,7 +2,19 @@ import json
 from tw_rouge import get_rouge
 import os
 from tqdm import tqdm
-import ipdb
+from argparse import ArgumentParser
+
+
+def parse_args():
+    parser = ArgumentParser()
+    parser.add_argument(
+        "--data_dir", type=str
+    )
+    parser.add_argument(
+        "--output_dir", type=str
+    )
+    args = parser.parse_args()
+    return args
 
 
 def get_accuracy(refs, preds):
@@ -20,8 +32,9 @@ def get_accuracy(refs, preds):
     return accuracy
 
 def main():
+    args = parse_args()
     result = []
-    directory = "all_results"
+    directory = args.data_dir
     for filename in tqdm(sorted(os.listdir(directory))):
         refs, preds = [], []
         f = os.path.join(directory, filename)
@@ -44,6 +57,6 @@ def main():
                            "accuracy_real": accuracy_real, 
                            "accuracy_overall": accuracy_overall})
 
-    json.dump(result, open("all_results/eval.json", "w"), indent=2, ensure_ascii=False)
+    json.dump(result, open(args.output_dir, "w"), indent=2, ensure_ascii=False)
 if __name__ == '__main__':
     main()

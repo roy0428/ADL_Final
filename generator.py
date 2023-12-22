@@ -42,6 +42,5 @@ def main():
     data_json = data
     json.dump(data_json, open(args.output_dir, "w"), indent=2, ensure_ascii=False)
 
-
 if __name__ == "__main__":
     main()

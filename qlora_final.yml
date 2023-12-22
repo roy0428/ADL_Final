@@ -8,11 +8,11 @@ load_in_4bit: true
 strict: false
 
 datasets:
-  - path: /home/p0428q/usr/ADL/HW3/data/final/train_one_shot_3000.json
+  - path: 
     type: alpaca
 dataset_prepared_path:
 val_set_size: 0.05
-output_dir: ./qlora-out_final_3000_one
+output_dir: 
 
 adapter: qlora
 lora_model_dir:
@@ -21,7 +21,7 @@ sequence_len: 4096
 sample_packing: true
 pad_to_sequence_len: true
 
-lora_r: 1
+lora_r: 2
 lora_alpha: 16
 lora_dropout: 0.05
 lora_target_modules:
@@ -35,8 +35,8 @@ wandb_run_id:
 wandb_log_model:
 
 gradient_accumulation_steps: 2
-micro_batch_size: 1
-num_epochs: 4
+micro_batch_size: 2
+num_epochs: 2
 optimizer: paged_adamw_32bit
 lr_scheduler: cosine
 learning_rate: 0.0002
