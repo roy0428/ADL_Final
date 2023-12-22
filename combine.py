@@ -32,5 +32,4 @@ if __name__ == "__main__":
                 "prediction": prediction_list[index]["output"]}
         result.append(data)
         
-    # data_json = result
     json.dump(result, open(args.output_dir, "w"), indent=2, ensure_ascii=False)

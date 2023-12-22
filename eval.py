@@ -8,10 +8,10 @@ from argparse import ArgumentParser
 def parse_args():
     parser = ArgumentParser()
     parser.add_argument(
-        "--data_dir", type=str
+        "--data_dir", default="all_results", type=str
     )
     parser.add_argument(
-        "--output_dir", type=str
+        "--output_dir", default="eval.json", type=str
     )
     args = parser.parse_args()
     return args
@@ -42,7 +42,10 @@ def main():
             data_list = json.load(file)
             for data in data_list:
                 refs.append(data["output"])
-                preds.append(data["prediction"])
+                if data["prediction"] != "":
+                    preds.append(data["prediction"])
+                else:
+                    preds.append("無")
                 
             ## Calculate rouge score
             rouge = get_rouge(preds, refs)
