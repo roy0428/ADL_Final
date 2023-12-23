@@ -17,12 +17,12 @@ output_dir:
 adapter: qlora
 lora_model_dir:
 
-sequence_len: 4096
+sequence_len: 512
 sample_packing: true
 pad_to_sequence_len: true
 
-lora_r: 2
-lora_alpha: 16
+lora_r: 16
+lora_alpha: 64
 lora_dropout: 0.05
 lora_target_modules:
 lora_target_linear: true
@@ -53,7 +53,7 @@ resume_from_checkpoint:
 local_rank:
 logging_steps: 1
 xformers_attention:
-flash_attention: false
+flash_attention: true
 
 warmup_steps: 10
 eval_steps: 0.05

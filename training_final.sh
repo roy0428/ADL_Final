@@ -13,8 +13,6 @@
 module load opt gcc python/3.9.13-gpu
 sbatch_pre.sh
 
-pip3 install flash-attn==1.0.9
-
 /home/p0428q/.local/bin/accelerate launch -m axolotl.cli.train examples/llama-2/qlora_final.yml --datasets.path="/home/p0428q/usr/ADL/HW3/data/final/train_3000.json" --output_dir="results/qlora-out_final_3000_zero_2"
 /home/p0428q/.local/bin/accelerate launch -m axolotl.cli.train examples/llama-2/qlora_final.yml --datasets.path="/home/p0428q/usr/ADL/HW3/data/final/train_one_shot_3000.json" --output_dir="results/qlora-out_final_3000_one_2"
 /home/p0428q/.local/bin/accelerate launch -m axolotl.cli.train examples/llama-2/qlora_final.yml --datasets.path="/home/p0428q/usr/ADL/HW3/data/final/train_two_shot_3000.json" --output_dir="results/qlora-out_final_3000_two_2"

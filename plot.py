@@ -11,7 +11,7 @@ def main():
         data_list = json.load(file)
     accuracy = []
     for data in data_list:
-        accuracy.append(data["accuracy_overall"])
+        accuracy.append(data["accuracy_gpt"])
         
     no_training = accuracy[-3:]
     accuracy[-6:] = accuracy[9:15]
