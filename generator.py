@@ -3,17 +3,15 @@ from tqdm import tqdm
 from argparse import ArgumentParser
 import json
 
+
 def parse_args():
     parser = ArgumentParser()
-    parser.add_argument(
-        "--number_of_data", default=5, type=int
-    )
-    parser.add_argument(
-        "--output_dir", default="data/output.json", type=str
-    )
+    parser.add_argument("--number_of_data", default=5, type=int)
+    parser.add_argument("--output_dir", default="data/output.json", type=str)
 
     args = parser.parse_args()
     return args
+
 
 def generator():
     api_key = "APIKEY"
@@ -38,9 +36,10 @@ def main():
     data = []
     for i in tqdm(range(args.number_of_data)):
         data.append(generator())
-        
+
     data_json = data
     json.dump(data_json, open(args.output_dir, "w"), indent=2, ensure_ascii=False)
+
 
 if __name__ == "__main__":
     main()

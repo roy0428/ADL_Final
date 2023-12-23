@@ -1,7 +1,7 @@
 from openai import OpenAI
 from tqdm import tqdm
 import json
-# import ipdb
+
 
 def main():
     with open("data/test_zero.json") as file:
@@ -22,8 +22,9 @@ def main():
         )
         output = response.choices[0].message.content
         data["prediction"] = output[3:]
-        
+
     json.dump(data_list["data"], open("GPT4_0.json", "w"), indent=2, ensure_ascii=False)
+
 
 if __name__ == "__main__":
     main()
