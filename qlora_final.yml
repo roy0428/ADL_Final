@@ -7,12 +7,12 @@ load_in_8bit: false
 load_in_4bit: true
 strict: false
 
-datasets:
-  - path: 
+datasets: 
+  - path: /home/p0428q/usr/ADL/HW3/data/final/train_3000.json
     type: alpaca
 dataset_prepared_path:
 val_set_size: 0.05
-output_dir: 
+output_dir: results/qlora-out_final_3000_zero_2
 
 adapter: qlora
 lora_model_dir:
@@ -34,7 +34,7 @@ wandb_watch:
 wandb_run_id:
 wandb_log_model:
 
-gradient_accumulation_steps: 2
+gradient_accumulation_steps: 4
 micro_batch_size: 2
 num_epochs: 2
 optimizer: paged_adamw_32bit
@@ -53,7 +53,7 @@ resume_from_checkpoint:
 local_rank:
 logging_steps: 1
 xformers_attention:
-flash_attention: true
+flash_attention: false
 
 warmup_steps: 10
 eval_steps: 0.05

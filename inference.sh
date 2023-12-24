@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #SBATCH --job-name="bash"
-#SBATCH --partition=v100-16g
+#SBATCH --partition=v100-32g
 #SBATCH --ntasks=4
 #SBATCH --gres=gpu:1
 #SBATCH --time=0-24:0

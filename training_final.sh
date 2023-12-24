@@ -25,18 +25,4 @@ sbatch_pre.sh
 /home/p0428q/.local/bin/accelerate launch -m axolotl.cli.train examples/llama-2/qlora_final.yml --datasets.path="/home/p0428q/usr/ADL/HW3/data/final/train_one_shot_10000.json" --output_dir="results/qlora-out_final_10000_one_2"
 /home/p0428q/.local/bin/accelerate launch -m axolotl.cli.train examples/llama-2/qlora_final.yml --datasets.path="/home/p0428q/usr/ADL/HW3/data/final/train_two_shot_10000.json" --output_dir="results/qlora-out_final_10000_tw_2"
 
-bash run.sh Taiwan-LLM-7B-v2.0-chat/ results/qlora-out_final_3000_zero_2/ /home/p0428q/usr/ADL/HW3/data/final/test_zero.json prediction.json output_json/3000_lora_0_2.json
-bash run.sh Taiwan-LLM-7B-v2.0-chat/ results/qlora-out_final_3000_one_2/ /home/p0428q/usr/ADL/HW3/data/final/test_one.json prediction.json output_json/3000_lora_1_2.json
-bash run.sh Taiwan-LLM-7B-v2.0-chat/ results/qlora-out_final_3000_two_2/ /home/p0428q/usr/ADL/HW3/data/final/test_two.json prediction.json output_json/3000_lora_2_2.json
-bash run.sh Taiwan-LLM-7B-v2.0-chat/ results/qlora-out_final_5000_zero_2/ /home/p0428q/usr/ADL/HW3/data/final/test_zero.json prediction.json output_json/5000_lora_0_2.json
-bash run.sh Taiwan-LLM-7B-v2.0-chat/ results/qlora-out_final_5000_one_2/ /home/p0428q/usr/ADL/HW3/ata/final/test_one.json prediction.json output_json/5000_lora_1_2.json
-bash run.sh Taiwan-LLM-7B-v2.0-chat/ results/qlora-out_final_5000_two_2/ /home/p0428q/usr/ADL/HW3/data/final/test_two.json prediction.json output_json/5000_lora_2_2.json
-bash run.sh Taiwan-LLM-7B-v2.0-chat/ results/qlora-out_final_10000_zero_2/ /home/p0428q/usr/ADL/HW3/data/final/test_zero.json prediction.json output_json/10000_lora_0_2.json
-bash run.sh Taiwan-LLM-7B-v2.0-chat/ results/qlora-out_final_10000_one_2/ /home/p0428q/usr/ADL/HW3/data/final/test_one.json prediction.json output_json/10000_lora_1_2.json
-bash run.sh Taiwan-LLM-7B-v2.0-chat/ results/qlora-out_final_10000_two_2/ /home/p0428q/usr/ADL/HW3/data/final/test_two.json prediction.json output_json/10000_lora_2_2.json
-
-python3 -m eval \
-    --data_dir output_json/ \
-    --output_dir eval.json
-
 sbatch_post.sh
