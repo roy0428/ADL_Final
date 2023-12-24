@@ -4,13 +4,13 @@ import json
 
 def parse_args():
     parser = ArgumentParser()
-    parser.add_argument("--data_dir", default="data/output_5000.json", type=str)
-    parser.add_argument("--output_dir_0", default="data/train_10000.json", type=str)
+    parser.add_argument("--data_dir", default="data/data.json", type=str)
+    parser.add_argument("--output_dir_0", default="data/all_real_2300.json", type=str)
     parser.add_argument(
-        "--output_dir_1", default="data/train_one_shot_10000.json", type=str
+        "--output_dir_1", default="data/train_one_shot_all_real_2300.json", type=str
     )
     parser.add_argument(
-        "--output_dir_2", default="data/train_two_shot_10000.json", type=str
+        "--output_dir_2", default="data/train_two_shot_all_real_2300.json", type=str
     )
 
     args = parser.parse_args()
