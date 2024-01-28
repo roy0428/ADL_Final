@@ -1,7 +1,7 @@
 # Chinese Typo Correction with Taiwan-LLaMa
 
 ## Abstract
-Developed a language model capable of identifying commonly misused words with an accuracy of 98.6%, surpassing the performance of GPT-4, which achieved only 88% accuracy.
+Developed a language model capable of identifying commonly misused words with an accuracy of 98.6%, surpassing the performance of GPT-4, which achieved only 82% accuracy.
 
 ## Data Generation and Preprocessing
 Data Generation
