@@ -1,5 +1,8 @@
 # Chinese Typo Correction with Taiwan-LLaMa
 
+## Abstract
+Developed a language model capable of identify commonly misused words with accuracy of 98.6%, exceeding GPT4's performance of 88%.
+
 ## Data Generation and Preprocessing
 Data Generation
 ```
